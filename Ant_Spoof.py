@@ -651,7 +651,7 @@ def denorm(t):
     img = t.cpu().numpy().transpose(1, 2, 0) * std + mean
     return np.clip(img, 0, 1)
 
-# ── 3) 각 클래스에서 1장씩 골라 Grad-CAM 시각화 ─────────────
+# ── 3) 각 클래스에서 1장씩 골라 Grad-CAM 시각화(AI 활용하여 코드 생성) ─────────────
 cls_order = ["real", "print", "replay"]
 picks = [(random.choice(glob.glob(f"./dataset/test/{c}/*")), c) for c in cls_order]
 
